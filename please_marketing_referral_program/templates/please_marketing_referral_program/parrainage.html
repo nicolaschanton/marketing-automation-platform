@@ -1,0 +1,131 @@
+{% extends "please_marketing_referral_program/base_site.html" %}
+
+{% block title %} {{ customer.first_name }} parrainez vos amis {% endblock title %}
+
+{% block meta %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="fb:app_id" content="326429988160137" />
+    <meta property="og:url" content="https://hello.pleaseapp.com/parrainage/hello?r={{ customer.referral_code }}"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Bénéficiez d'une remise de 5€ 😍 avec le code {{ customer.referral_code }} sur votre première commande Please !"/>
+    <meta property="og:description" content="Faites comme {{ customer.first_name }}, rejoignez Please et faites vous livrer les meilleurs restaurants et commerces de votre ville !"/>
+    <meta property="og:image" content="https://pleasemarketing.s3.amazonaws.com/static/please_marketing_referral_program/img/others/parrainage_hello.png"/>
+{% endblock meta %}
+
+{% block content %} {% load static %}
+
+    <section id="intro">
+        <div class="intro-content bckg-yellow-300">
+            <h1>{{ customer.first_name }}, parrainez vos amis avec le code {{ customer.referral_code }} !</h1>
+            <h3 class="text-white hide-when-small">Partagez votre goût pour les bonnes choses avec vos amis...</h3>
+        </div>
+    </section>
+
+<!-- Cette balise est modifiée à l'initialisation du script Facebook.  -->
+<!-- N'y touchez pas.  -->
+<div id="fb-root"></div>
+<script>
+  // Initialisation de l'application.
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '326429988160137',
+      cookie     : true,  // enable cookies to allow the server to access the session
+      xfbml      : true,  // parse social plugins on this page
+      version    : 'v2.8' // use graph api version 2.8
+    });
+  };
+
+  // Ajout au DOM des fichiers source.
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.9&appId=326429988160137";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  // Au clic sur l'élément dont l'id est FBShare,
+  // ouverture de la fenêtre de partage.
+function ShareFb() {
+    FB.ui({
+        method: 'share',
+        href: "https://hello.pleaseapp.com/parrainage/hello?r={{ customer.referral_code }}",
+        mobile_iframe: true
+    }, function(response){});
+}
+
+function ShareMs() {
+    FB.ui({
+        method: 'send',
+        link: "https://hello.pleaseapp.com/parrainage/hello?r={{ customer.referral_code }}"
+    }, function(response){});
+}
+</script>
+
+    <main id="main" class="padding-top-20 padding-bottom-10">
+        <section id="advantages">
+            <div class="container">
+                <h1 class="padding-top-10 padding-bottom-10">1 parrainage = 5€ pour vous, 5€ pour votre ami(e)*</h1>
+                <h3 class="padding-top-10">*Nombre de parrainages illimités 🤩. A chaque ami(e) parrainé(e), vous gagnez 1 bon d'achat de 5€, et vous lui faites gagner 5€ !</h3>
+                    <div class="row">
+
+                        <div class="col-lg-4 col-md-4 col-sm-12 div-col">
+                            <div>
+                                <form method="POST">
+                                <div class="form-group">
+                                    {% csrf_token %}
+                                    {{ form_referral_email.as_p }}
+                                    <button type="submit">Inviter par email</button>
+                                </div>
+                            </form>
+                            </div>
+                        </div>
+
+                         <div class="col-lg-4 col-md-4 col-sm-12 div-col">
+                            <div>
+                                <form method="POST">
+                                <div class="form-group">
+                                    {% csrf_token %}
+                                    {{ form_referral_sms.as_p }}
+                                    <button type="submit">Inviter par sms</button>
+                                </div>
+                            </form>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-12 div-col">
+                            <div id="fake-form">
+                                <input class="text-input" type="text" value="{{ customer.referral_code }}" id="RefCode">
+                                <button onclick="copyClipboard()">Copier mon code !</button>
+                            </div>
+                        </div>
+                    </div>
+
+                <h3>Parce qu'avec <a href="https://pleaseapp.com/#/quartier/{{ customer.neighborhood.name }}" target="_blank">Please</a> vous pouvez gâter vos amis 😍 et vous faire plaisir en même temps 🍔</h3>
+                <div class="row social">
+                    <div class="col-lg-4 col-md-4 col-sm-12 social-col">
+                        <a onclick="ShareFb()" class="facebook-btn">
+                            <i class="fa fa-facebook"></i>
+                            Partager via Facebook
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 social-col">
+                        <a onclick="ShareMs()" class="messenger-btn">
+                            <i class="fa fa-facebook-square"></i>
+                            Partager via Messenger
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 social-col">
+                        <a class="twitter-btn" href="https://twitter.com/intent/tweet?url=https://hello.pleaseapp.com/parrainage/hello?r={{ customer.referral_code }}&hashtags=pleaseapp,livraison,foodtech,delivery,commerce,local&text=Gagnez 5€ grâce à mon code {{ customer.referral_code }} dans @Pleaseapp 😍 🍔 🌮" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                            Partager via Twitter
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    </main>
+{% endblock content %}

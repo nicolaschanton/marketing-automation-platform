@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106538428-2"></script>
+      <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-106538428-2');
+      </script>
+
+      <!-- Facebook Pixel Code -->
+      <script>
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '261368947827300');
+          fbq('track', 'PageView');
+      </script>
+      <noscript>
+          <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=261368947827300&ev=PageView&noscript=1"/>
+      </noscript>
+        <!-- End Facebook Pixel Code -->
+
+      {% load static %}
+      {% load cloudinary %}
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+      <!-- Favicons -->
+      <link href="{% static 'please_marketing_landing_pages/img/favicon/favicon.ico' %}" rel="icon" type="image/png"/>
+
+      <!-- Icons -->
+      <link rel="apple-touch-icon" sizes="180x180" href="{% static 'please_marketing_landing_pages/img/icons/icon-180.png' %}"/>
+      <link rel="apple-touch-icon" sizes="128x128" href="{% static 'please_marketing_landing_pages/img/icons/icon-128.png' %}">
+      <link rel="icon" sizes="192x192" href="{% static 'please_marketing_landing_pages/img/icons/icon-192.png' %}">
+
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+      <!-- Add icon library -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <!-- Main Stylesheet File -->
+      <link href="{% static 'please_marketing_landing_pages/css/css.css' %}" rel="stylesheet">
+
+
+      <title>Please Game</title>
+
+  </head>
+
+  <body style="height: 100vh">
+
+    <iframe src="https://pleasewebsite.s3.amazonaws.com/media/documents/site/y2mate.com_-_original_tetris_theme_tetris_soundtrack_NmCCQxVBfyM.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+
+    <div id="full-page" style="height: 100vh">
+        <div class="row" style="height: 100vh">
+            <div class="col-lg-7 col-md-12 form-full-page-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(2, 2, 2, 0.25), transparent), url({{ header_image_url }})">
+                <div class="text-box-form-full-page-image">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                      <a class="navbar-brand" href="https://pleaseapp.com">
+                          <img src="{% static "please_marketing_landing_pages/img/logos/PLEASE-blanc.png" %}" width="150" height="40" class="d-inline-block align-top" alt="please-logo">
+                      </a>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-md-12 form-full-page-form">
+                <h1 class="text-header-form retro-gaming">PLEASE GAME</h1>
+                <img src="https://pleasewebsite.s3.amazonaws.com/media/documents/site/Pac-Man-Ghost-PNG-Transparent-Image.png" height="150px" style="display: block; margin-left: auto; margin-right: auto">
+                <h2 class="retro-gaming sub-header">Pour jouer et tenter de gagner un super code promo, renseignez ces quelques infos !</h2>
+                <br>
+                <form method="POST" class="padding-top-30 retro-gaming">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <br>
+                    <button type="submit" class="button-retro-gaming full-width">Let's Play</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

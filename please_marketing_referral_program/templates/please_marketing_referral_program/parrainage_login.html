@@ -1,0 +1,111 @@
+{% extends "please_marketing_referral_program/base_site.html" %}
+
+{% block title %} Récupérez votre code de parrainage {% endblock title %}
+
+{% block meta %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="fb:app_id" content="326429988160137" />
+    <meta property="og:url" content="https://hello.pleaseapp.com/parrainage/parrainage_login"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Offrez 5€ 🎁 à vos amis et recevez 5€ pour votre prochaine commande 😍!"/>
+    <meta property="og:description" content="Rejoignez Please et faites vous livrer les meilleurs restaurants et commerces de votre ville !"/>
+    <meta property="og:image" content="https://pleasemarketing.s3.amazonaws.com/static/please_marketing_referral_program/img/others/parrainage_hello.png"/>
+{% endblock meta %}
+
+{% block content %} {% load static %}
+
+    <section id="intro">
+        <div class="intro-content bckg-yellow-300">
+            <h1 class="padding-top-10">Récupérez votre code de parrainage !</h1>
+            <h2 style="color: white; margin: 0">Partagez votre goût pour les bonnes choses avec vos amis...</h2>
+        </div>
+    </section>
+
+<!-- Cette balise est modifiée à l'initialisation du script Facebook.  -->
+<!-- N'y touchez pas.  -->
+<div id="fb-root"></div>
+<script>
+  // Initialisation de l'application.
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '326429988160137',
+      cookie     : true,  // enable cookies to allow the server to access the session
+      xfbml      : true,  // parse social plugins on this page
+      version    : 'v2.8' // use graph api version 2.8
+    });
+  };
+
+  // Ajout au DOM des fichiers source.
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.9&appId=326429988160137";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  // Au clic sur l'élément dont l'id est FBShare,
+  // ouverture de la fenêtre de partage.
+function ShareFb() {
+    FB.ui({
+        method: 'share',
+        href: "https://hello.pleaseapp.com/parrainage/parrainage_login",
+        mobile_iframe: true
+    }, function(response){});
+}
+
+function ShareMs() {
+    FB.ui({
+        method: 'send',
+        link: "https://hello.pleaseapp.com/parrainage/parrainage_login"
+    }, function(response){});
+}
+</script>
+
+    <main id="main" class="padding-top-20 padding-bottom-10">
+        <section id="advantages">
+            <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 div-col">
+                            <p style="text-align: center">Un jour je serai le meilleur parrain !</p>
+                            <br>
+                            <div>
+                                <form method="POST">
+                                <div class="form-group">
+                                    {% csrf_token %}
+                                    {{ form_login.as_p }}
+                                    <button type="submit">Récupérer mon code</button>
+                                </div>
+                            </form>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="row social">
+                    <div class="col-lg-4 col-md-4 col-sm-12 social-col">
+                        <a onclick="ShareFb()" class="facebook-btn">
+                            <i class="fa fa-facebook"></i>
+                            Partager via Facebook
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 social-col">
+                        <a onclick="ShareMs()" class="messenger-btn">
+                            <i class="fa fa-facebook-square"></i>
+                            Partager via Messenger
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 social-col">
+                        <a class="twitter-btn" href="https://twitter.com/intent/tweet?url=https://hello.pleaseapp.com/parrainage/parrainage_login?hashtags=pleaseapp,livraison,foodtech,delivery,commerce,local&text=Gagnez 5€ grâce à mon code de parrainage dans @Pleaseapp 😍 🍔 🌮" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                            Partager via Twitter
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    </main>
+{% endblock content %}

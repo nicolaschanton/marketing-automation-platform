@@ -1,0 +1,97 @@
+{% extends "please_marketing_growth_hack/base_site.html" %}
+
+{% block title %} Inscription 👋 {% endblock title %}
+
+{% block meta %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="fb:app_id" content="326429988160137" />
+    <meta property="og:url" content="https://hello.pleaseapp.com/inscription/inscription?mw_offer_id={{ merchant_mw_id }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Inscrivez vous sur Please !" />
+    <meta property="og:description" content="{{ merchant_name }} | 5€ offerts sur votre première livraison !" />
+    <meta property="og:image" content="https://pleasemarketing.s3.amazonaws.com/static/please_marketing_referral_program/img/others/parrainage_hello.png" />
+{% endblock meta %}
+
+{% block content %} {% load static %}
+
+    <div class="loading" id="loader"></div>
+
+    <!-- Cette balise est modifiée à l'initialisation du script Facebook.  -->
+    <!-- N'y touchez pas.  -->
+    <div id="fb-root"></div>
+    <script>
+      // Initialisation de l'application.
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '326429988160137',
+          cookie     : true,  // enable cookies to allow the server to access the session
+          xfbml      : true,  // parse social plugins on this page
+          version    : 'v2.8' // use graph api version 2.8
+        });
+      };
+
+      // Ajout au DOM des fichiers source.
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.9&appId=326429988160137";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
+      // Au clic sur l'élément dont l'id est FBShare,
+      // ouverture de la fenêtre de partage.
+        function ShareFb() {
+            FB.ui({
+                method: 'share',
+                href: "https://hello.pleaseapp.com/parrainage/hello?r={{ customer.referral_code }}",
+                mobile_iframe: true
+            }, function(response){});
+        }
+
+        function ShareMs() {
+            FB.ui({
+                method: 'send',
+                link: "https://hello.pleaseapp.com/parrainage/hello?r={{ customer.referral_code }}"
+            }, function(response){});
+        }
+    </script>
+
+    <section id="form" class="padding-bottom-30">
+            <div class="container align-center">
+                <br>
+                <br>
+                <img src="{% static "please_marketing_growth_hack/img/logos/PLEASE-blanc.png" %}">
+                <br>
+                <h1>{{ merchant_name }} livré chez vous ! <br> Inscription = 5€ offerts</h1>
+                <h3>La prochaine fois, faites-vous livrer {{ merchant_name }} en moins de 30 minutes avec Please 🍔 🥑 🥐 !</h3>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div>
+                            <form method="POST" id="SignUpForm">
+                                <div class="form-group">
+                                    {% csrf_token %}
+                                    {{ form_sign_up.as_p }}
+                                </div>
+                                <br>
+                                <button type="submit" id="buttonSignup">Je m'inscris</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxggFcLe6SuDIWuz3HQ39hoCu0a1hiWYU&libraries=places"></script>
+
+    <script>
+        var defaultBounds = new google.maps.LatLngBounds(
+        new google.maps.LatLng(-33.8902, 151.1759),
+        new google.maps.LatLng(-33.8474, 151.2631));
+        var input = document.getElementById('where');
+        var searchBox = new google.maps.places.SearchBox(input, {bounds: defaultBounds});
+    </script>
+
+{% endblock content %}

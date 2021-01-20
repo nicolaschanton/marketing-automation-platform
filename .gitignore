@@ -1,0 +1,4 @@
+*.pyc
+db.sqlite3
+please_marketing/settings_dev.py
+please_marketing/settings_notif.py

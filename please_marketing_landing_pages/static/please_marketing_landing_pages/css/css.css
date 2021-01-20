@@ -1,0 +1,701 @@
+html {
+    width: 100%;
+}
+
+body {
+    background-color: #F9F9F9;
+}
+
+h1 {
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.4em;
+}
+
+h2 {
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.4em;
+}
+
+h3 {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.4em;
+}
+
+h4 {
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a:hover {
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+span {
+    color: #FFD000;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.main-button {
+    background-color: #FFD000;
+    color: #ffffff;
+    text-align: center;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 2px;
+    border: none;
+}
+
+.main-button:hover {
+    background-color: #ffd420;
+    color: #ffffff;
+    text-align: center;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 2px;
+    border: none;
+}
+
+.main-button-reverse {
+    background-color: #FFFFFF;
+    color: #FFD000;
+    text-align: center;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 2px;
+}
+
+.main-button-reverse:hover {
+    background-color: #FFFFFF;
+    color: #FFD000;
+    text-align: center;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 2px;
+}
+
+.secondary-button {
+    color: #FFFFFF;
+    background: none;
+    text-align: center;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 2px;
+    border: solid;
+    border-color: #ffffff;
+    border-width: 1.3px;
+}
+
+.secondary-button:hover {
+    color: #FFFFFF;
+    background: none;
+    text-align: center;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 2px;
+    border: solid;
+    border-color: #ffffff;
+    border-width: 1.3px;
+}
+
+button {
+    color: #FFFFFF;
+    background: none;
+    text-align: center;
+    height: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 2px;
+    border: solid;
+    border-color: #ffffff;
+    border-width: 1.3px;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button:hover {
+    color: #FFFFFF;
+    background: none;
+    text-align: center;
+    height: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 2px;
+    border: solid;
+    border-color: #ffffff;
+    border-width: 1.3px;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button:focus {
+    outline: none;
+}
+
+.text-input {
+    margin: 0;
+    height: 40px;
+    padding: 15px;
+    border-radius: 2px;
+    border-color: #FFFFFF;
+    background-color: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    color: #404852;
+    width: 100%;
+    -webkit-box-shadow: 2px 6px 29px -10px rgba(0,0,0,0.3);
+    -moz-box-shadow: 2px 6px 29px -10px rgba(0,0,0,0.3);
+    box-shadow: 2px 6px 29px -10px rgba(0, 0, 0, 0.3);
+}
+
+.text-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ADB3C0;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.text-input:focus {
+    outline: none;
+}
+
+.retro-gaming {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.sub-header {
+    font-size: 14px;
+    text-align: center;
+}
+
+.retro-gaming label {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.button-retro-gaming {
+    background-color: #FF0166;
+    color: #ffffff;
+    text-align: center;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 2px;
+    border: none;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.button-retro-gaming:hover {
+    background-color: #FD5BFF;
+    color: #ffffff;
+    text-align: center;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 2px;
+    border: none;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.text-input-retro-gaming {
+    margin: 0;
+    height: 40px;
+    padding: 15px;
+    border-radius: 2px;
+    border-color: #FFFFFF;
+    background-color: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    color: #404852;
+    width: 100%;
+    -webkit-box-shadow: 2px 6px 29px -10px rgba(0,0,0,0.3);
+    -moz-box-shadow: 2px 6px 29px -10px rgba(0,0,0,0.3);
+    box-shadow: 2px 6px 29px -10px rgba(0, 0, 0, 0.3);
+    font-family: 'Press Start 2P', cursive;
+}
+
+.text-input-retro-gaming::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ADB3C0;
+    font-size: 12px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.text-input-retro-gaming:focus {
+    outline: none;
+}
+
+.date-input-retro {
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    margin-bottom: 10px;
+    height: 40px;
+    padding: 15px;
+    border-radius: 2px;
+    border-color: #FFFFFF;
+    background-color: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    color: #404852;
+    width: 100%;
+    -webkit-box-shadow: 2px 6px 29px -10px rgba(0,0,0,0.3);
+    -moz-box-shadow: 2px 6px 29px -10px rgba(0,0,0,0.3);
+    box-shadow: 2px 6px 29px -10px rgba(0, 0, 0, 0.3);
+}
+
+.date-input-retro::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ADB3C0;
+    font-size: 12px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.date-input-retro:focus {
+    outline: none;
+}
+
+.long-text-input {
+    margin: 0;
+    min-height: 80px;
+    padding: 15px;
+    border-radius: 2px;
+    border-color: #FFFFFF;
+    background-color: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    color: #404852;
+    width: 100%;
+}
+
+.text-input-2 {
+    margin: 0;
+    height: 50px;
+    padding: 15px;
+    border-radius: 2px;
+    border-color: #ADB3C0;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 1px;
+    color: #404852;
+    width: 100%;
+}
+
+.text-input-2::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ADB3C0;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.text-input-2:focus {
+    outline: none;
+}
+
+label {
+    display: block;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: #404852;
+    line-height: 1.5em;
+}
+
+.white {
+    color: #ffffff;
+}
+
+.dark-grey {
+    color: #404852;
+}
+
+.light-grey {
+    color: #ADB3C0;
+}
+
+.title {
+    max-width: 60%;
+}
+
+@media only screen and (max-width: 994px) {
+    .title {
+    max-width: 100%;
+}
+}
+
+.max-with-60 {
+    max-width: 60%;
+}
+
+.max-with-70 {
+    max-width: 70%;
+}
+
+.max-with-80 {
+    max-width: 80%;
+}
+
+.padding-top-0 {
+    padding-top: 0;
+}
+
+.padding-top-10 {
+    padding-top: 10px;
+}
+
+.padding-top-20 {
+    padding-top: 20px;
+}
+
+.padding-top-30 {
+    padding-top: 30px;
+}
+
+.padding-top-50 {
+    padding-top: 50px;
+}
+
+.padding-top-100 {
+    padding-top: 100px;
+}
+
+.padding-bottom-0 {
+    padding-bottom: 0;
+}
+
+.padding-bottom-10 {
+    padding-bottom: 10px;
+}
+
+.padding-bottom-20 {
+    padding-bottom: 20px;
+}
+
+.padding-bottom-30 {
+    padding-bottom: 30px;
+}
+
+.padding-bottom-50 {
+    padding-bottom: 50px;
+}
+
+.padding-bottom-100 {
+    padding-bottom: 100px;
+}
+
+.margin-bottom-0 {
+    margin-bottom: 0;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.logo-header {
+    max-width: 150px;
+}
+
+#header-alert {
+    z-index:9999;
+    position:sticky;
+    position: -webkit-sticky;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFD000;
+    border: none;
+    -webkit-box-shadow: 2px 6px 29px -10px rgba(0,0,0,0.3);
+    -moz-box-shadow: 2px 6px 29px -10px rgba(0,0,0,0.3);
+    box-shadow: 2px 6px 29px -10px rgba(0, 0, 0, 0.3);
+}
+
+#header-alert-date {
+    z-index:9999;
+    position:sticky;
+    position: -webkit-sticky;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #009688;
+    border: none;
+    -webkit-box-shadow: 2px 6px 29px -10px rgba(0,0,0,0.3);
+    -moz-box-shadow: 2px 6px 29px -10px rgba(0,0,0,0.3);
+    box-shadow: 2px 6px 29px -10px rgba(0, 0, 0, 0.3);
+}
+
+#header-dlp {
+    border: none;
+    background-size: cover;
+    width: 100%;
+    min-height: 350px;
+}
+
+#merchant-list {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.merchant-box {
+    padding: 10px;
+    background-color: white;
+    min-height: 200px;
+    -webkit-box-shadow: 2px 6px 29px -10px rgba(0,0,0,0.3);
+    -moz-box-shadow: 2px 6px 29px -10px rgba(0,0,0,0.3);
+    box-shadow: 2px 6px 29px -10px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    line-height: 0.5;
+}
+
+.merchant-box:hover {
+    padding: 10px;
+    background-color: white;
+    min-height: 200px;
+    -webkit-box-shadow: 2px 6px 29px -10px rgba(0,0,0,0.35);
+    -moz-box-shadow: 2px 6px 29px -10px rgba(0,0,0,0.35);
+    box-shadow: 2px 6px 29px -10px rgba(0, 0, 0, 0.35);
+    border-radius: 4px;
+    line-height: 0.5;
+}
+
+#merchant-name {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.link-merchant {
+    color: #404852;
+}
+
+.link-merchant:hover {
+    color: #404852;
+}
+
+.navbar {
+    background: none;
+    padding: 0;
+}
+
+.navbar-expand-lg {
+    background: none;
+    padding: 0;
+}
+
+.navbar-light {
+    background: none;
+    padding: 0;
+}
+
+.bg-light {
+    background: none;
+    padding: 0;
+}
+
+.margin-left-20 {
+    margin-left: 20px;
+}
+
+#navbarNavAltMarkup {
+    margin-left:auto;
+    margin-right:0;
+}
+
+.nav-text:hover {
+    color: #FFD000;
+}
+
+.unchecked{
+    color: #ADB3C0;
+}
+
+.icon-cross-right {
+    margin: auto;
+    float: right;
+    cursor: pointer;
+}
+
+.icon-menu-right {
+    display: inline-block;
+    float: right;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+
+.item-box {
+    width: 100%;
+    height: 150px;
+}
+
+#item-picture {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#form-full-page-image-thanks{
+    border: none;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(2, 2, 2, 0.25), transparent), url("../img/background/please_restaurants.jpg");
+    background-size: cover;
+    width: auto;
+    height: 100vh;
+}
+
+#form-full-page-image-unsubscribe{
+    border: none;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(2, 2, 2, 0.5), transparent), url("../img/background/please_restaurants.jpg");
+    background-size: cover;
+    width: auto;
+    height: 100vh;
+}
+
+.form-full-page-image{
+    border: none;
+    background-size: cover;
+    width: 100%;
+}
+
+@media only screen and (max-width: 994px) {
+    .form-full-page-image{
+    border: none;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+}
+
+.text-box-form-full-page-image {
+    margin: 10%;
+}
+
+.footer {
+    margin-top: 50px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 12px;
+}
+
+.footer-dark {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 12px;
+    background-color: #FFD000;
+}
+
+.footer-dark p {
+    color: #ffffff;
+    font-size: 12px;
+    padding-top: 10px;
+}
+
+.footer a {
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.footer a:hover {
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.form-full-page-form {
+    border: none;
+    width: 100%;
+    padding: 3% 50px 0 50px;
+}
+
+@media only screen and (max-width: 994px) {
+    .form-full-page-form {
+    border: none;
+    width: 100%;
+    height: 100%;
+    padding: 3% 50px 0 50px;
+}
+}
+
+#form-full-page .row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.text-footer-local {
+    margin-bottom: 0;
+    font-size: 8px;
+    text-align: center;
+    position: relative;
+}
+
+.text-header-form {
+    text-align: center;
+}
+
+.footer-local-a {
+    color: #FFD000;
+    font-size: 12px;
+}
+
+.footer-local-a:hover {
+    color: #FFD000;
+    font-size: 12px;
+}
+
+.offer-tag {
+    background-color: rgba(0, 0, 0, 0.95);
+    display: block;
+    width: fit-content;
+    padding: 7px;
+    position: absolute;
+    color: white;
+    border-radius: 10px;
+    line-height: 0;
+    font-size: 10px;
+}

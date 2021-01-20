@@ -1,0 +1,28 @@
+{% extends "please_marketing_growth_hack/base_site.html" %}
+
+{% block title %} Formulaire invalide {% endblock title %}
+
+{% block meta %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   {% endblock meta %}
+
+{% block content %} {% load static %}
+
+        <main id="main" class="padding-top-30">
+            <section id="advantages">
+                <div class="container">
+                    <h1 class="padding-top-10 padding-bottom-10">Ouuups 😒! </h1>
+                    <h1 class="padding-top-10 padding-bottom-10">Il semblerait qu'il y ait une erreur dans votre formulaire d'inscription. Pensez à vérifier que votre mot de passe contient bien plus de 8 caractères, une majuscule et un chiffre.</h1>
+                    <div class="row">
+                        <div class="padding-bottom-50 padding-top-10 hello">
+                            <a class="primary-btn" href="/inscription/inscription?mw_offer_id={{ mw_offer_id }}" target="">Recommencer mon inscription !</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+{% endblock content %}

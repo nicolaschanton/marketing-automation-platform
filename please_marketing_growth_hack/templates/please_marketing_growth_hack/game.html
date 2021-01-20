@@ -1,0 +1,36 @@
+{% extends "please_marketing_growth_hack/base_site.html" %}
+
+{% block title %} Jeu Concours {% endblock title %}
+
+{% block meta %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   {% endblock meta %}
+
+{% block content %} {% load static %}
+
+    <div class="animation-game" id="animation-game"></div>
+
+     <main id="main" class="padding-top-30">
+            <section id="advantages">
+                <div class="container">
+                    <a href="https://www.pleaseapp.com/#/offers/{{ merchant_id }}" target="_blank">
+                    <img src="{% static "please_marketing_growth_hack/img/logos/PLEASE-blanc.png" %}">
+                    </a>
+                    <br>
+                    <br>
+                    <br>
+                    <iframe src="https://giphy.com/embed/rY93u9tQbybks" width="480" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                    <h1 class="padding-top-10 padding-bottom-10">{{ title }} </h1>
+                    <h3 class="padding-top-10 padding-bottom-10">{{ text }}</h3>
+                    <div class="row">
+                        <div class="padding-bottom-50 padding-top-10 hello">
+                            <a class="primary-btn" href="https://www.pleaseapp.com/#/offers/{{ merchant_id }}" target="_blank">Je commande !</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+{% endblock content %}

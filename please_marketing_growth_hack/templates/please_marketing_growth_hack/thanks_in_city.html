@@ -1,0 +1,28 @@
+{% extends "please_marketing_growth_hack/base_site.html" %}
+
+{% block title %} Merci 😍{% endblock title %}
+
+{% block meta %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   {% endblock meta %}
+
+{% block content %} {% load static %}
+
+        <main id="main" class="padding-top-30">
+            <section id="advantages">
+                <div class="container">
+                    <h1 class="padding-top-10 padding-bottom-10">Merci 🤩! </h1>
+                    <h1 class="padding-top-10 padding-bottom-10">Votre inscription a bien été réalisée !</h1>
+                    <div class="row">
+                        <div class="padding-bottom-50 padding-top-10 hello">
+                            <a class="primary-btn" href="/inscription/inscription_ville?nb_id={{ nb_id }}" target="">J'ai terminé !</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+{% endblock content %}

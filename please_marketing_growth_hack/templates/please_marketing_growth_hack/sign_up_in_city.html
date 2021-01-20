@@ -1,0 +1,56 @@
+{% extends "please_marketing_growth_hack/base_site.html" %}
+
+{% block title %} Inscription 👋 {% endblock title %}
+
+{% block meta %}
+     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="fb:app_id" content="326429988160137" />
+    <meta property="og:url" content="https://hello.pleaseapp.com/inscription/inscription_ville?nb_id={{ nb_id }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Inscrivez vous sur Please !" />
+    <meta property="og:description" content="Vos commerces et restos préférés livrés chez vous en 30 min !" />
+    <meta property="og:image" content="https://pleasemarketing.s3.amazonaws.com/static/please_marketing_referral_program/img/others/parrainage_hello.png" />
+{% endblock meta %}
+
+{% block content %} {% load static %}
+
+    <div class="loading" id="loader"></div>
+
+    <section id="form" class="padding-bottom-30">
+            <div class="container align-center">
+                <br>
+                <br>
+                <img src="{% static "please_marketing_growth_hack/img/logos/PLEASE-blanc.png" %}">
+                <br>
+                <h1>Vos commerces et restos préférés livrés chez vous en 30 min !</h1>
+                <h3>🎁 Recevez un bon d'achat de 5€ par SMS à la fin de ce formulaire...</h3>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div>
+                            <form method="POST" id="SignUpForm">
+                                <div class="form-group">
+                                    {% csrf_token %}
+                                    {{ form_sign_up.as_p }}
+                                </div>
+                                <br>
+                                <button type="submit" id="buttonSignup">Je m'inscris</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxggFcLe6SuDIWuz3HQ39hoCu0a1hiWYU&libraries=places"></script>
+
+    <script>
+        var defaultBounds = new google.maps.LatLngBounds(
+        new google.maps.LatLng(-33.8902, 151.1759),
+        new google.maps.LatLng(-33.8474, 151.2631));
+        var input = document.getElementById('where');
+        var searchBox = new google.maps.places.SearchBox(input, {bounds: defaultBounds});
+    </script>
+
+{% endblock content %}

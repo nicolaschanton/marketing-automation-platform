@@ -1,0 +1,301 @@
+/*----------------------*/
+/* BUTTONS */
+/*----------------------*/
+
+button {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 0px;
+    padding: 10px 32px;
+    border-radius: 3px;
+    transition: 0.5s;
+    color: #212121;
+    box-shadow: 3px 3px 7px hsla(29,4%,0%,0.2);
+    background: #FFC107;
+    border: none;
+    width: 100%;
+}
+
+button:hover {
+    background: #FFC107;
+    color: #212121;
+}
+
+.primary-btn {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    display: inline-block;
+    padding: 10px 32px;
+    border-radius: 3px;
+    transition: 0.5s;
+    margin-top: 10px;
+    color: #212121;
+    box-shadow: 3px 3px 7px hsla(29,4%,0%,0.2);
+    background: #FFC107;
+    width: 100%;
+}
+
+.primary-btn:hover {
+    background: #FFC107;
+    color: #212121;
+}
+
+
+.primary-btn-cta {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    display: inline-block;
+    padding: 10px 32px;
+    border-radius: 0 3px 3px 0;
+    transition: 0.5s;
+    color: #212121;
+    background: #FFC107;
+    box-shadow: none;
+    height: 50px;
+}
+
+.primary-btn-cta:hover {
+    background: #FFC107;
+    color: #212121;
+}
+
+.facebook-btn {
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    display: inline-block;
+    padding: 5px 20px;
+    border-radius: 3px;
+    transition: 0.5s;
+    margin: 5px;
+    color: #ffffff;
+    box-shadow: 3px 3px 7px hsla(29,4%,0%,0.2);
+    background: #3B5998;
+}
+
+.facebook-btn:hover {
+    background: #3B5998;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.twitter-btn {
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    display: inline-block;
+    padding: 5px 20px;
+    border-radius: 3px;
+    transition: 0.5s;
+    margin: 5px;
+    color: #ffffff;
+    box-shadow: 3px 3px 7px hsla(29,4%,0%,0.2);
+    background: #00aced;
+}
+
+.twitter-btn:hover {
+    background: #00aced;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.messenger-btn {
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    display: inline-block;
+    padding: 5px 20px;
+    border-radius: 3px;
+    transition: 0.5s;
+    margin: 5px;
+    color: #ffffff;
+    box-shadow: 3px 3px 7px hsla(29,4%,0%,0.2);
+    background: #0084ff;
+}
+
+.messenger-btn:hover {
+    background: #0084ff;
+    color: #ffffff;
+    cursor: pointer;
+}
+/*----------------------*/
+/* PRELOADER */
+/*----------------------*/
+
+#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    background: #fff url("../img/others/preloader.gif") no-repeat center center;
+}
+
+
+/*----------------------*/
+/* BACK TO TOP BUTTON */
+/*----------------------*/
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    background: #FFC107;
+    color: #fff;
+    padding: 6px 12px 9px 12px;
+    font-size: 16px;
+    border-radius: 2px;
+    right: 15px;
+    bottom: 15px;
+    transition: background 0.5s;
+}
+
+.back-to-top:focus {
+    background: #FFC107;
+    color: #fff;
+    outline: none;
+}
+
+.back-to-top:hover {
+    background: #009688;
+    color: #fff;
+}
+
+
+/*----------------------*/
+/* BACKGROUND */
+/*----------------------*/
+
+.bckg-yellow-300 {
+    background-image:url('../img/backgrounds/parrainage.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+}
+
+.bckg-hello-300 {
+    background-image:url('../img/backgrounds/hello.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 330px;
+}
+
+/*----------------------*/
+/* PADDING */
+/*----------------------*/
+
+.padding-bottom-10 {
+    padding-bottom: 10px;
+}
+
+.padding-bottom-20 {
+    padding-bottom: 20px;
+}
+
+.padding-bottom-30 {
+    padding-bottom: 30px;
+}
+
+.padding-bottom-40 {
+    padding-bottom: 40px;
+}
+
+.padding-bottom-50 {
+    padding-bottom: 50px;
+}
+
+.padding-bottom-100 {
+    padding-bottom: 100px;
+}
+
+.padding-top-10 {
+    padding-top: 10px;
+}
+
+.padding-top-20 {
+    padding-top: 20px;
+}
+
+.padding-top-30 {
+    padding-top: 30px;
+}
+
+.padding-top-40 {
+    padding-top: 40px;
+}
+
+.padding-top-50 {
+    padding-top: 50px;
+}
+
+.padding-top-100 {
+    padding-top: 100px;
+}
+
+
+/*----------------------*/
+/* MARGIN */
+/*----------------------*/
+
+.margin-top-main {
+    margin-top: 50px;
+}
+
+.margin-section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+/*----------------------*/
+/* INPUTS */
+/*----------------------*/
+
+.text-input {
+    margin: 0;
+    height: 45px;
+    padding: 15px;
+    border-radius: 3px;
+    border-color: #BDBDBD;
+    border-style: solid;
+    border-width: 1px;
+    color: #212121;
+    width: 100%;
+}
+
+.long-text-input {
+    margin: 0;
+    min-height: 80px;
+    padding: 15px;
+    border-radius: 3px;
+    border-color: #BDBDBD;
+    border-style: solid;
+    border-width: 1px;
+    color: #212121;
+    width: 100%;
+}
+
+label {
+    display: block;
+    text-align: left;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #212121;
+    line-height: 1.5em;
+}
+
+
+/*----------------------*/
+/* DIV */
+/*----------------------*/
+
+.align-center {
+    text-align: center;
+}

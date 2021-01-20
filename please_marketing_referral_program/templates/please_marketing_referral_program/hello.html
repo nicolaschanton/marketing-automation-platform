@@ -1,0 +1,45 @@
+{% extends "please_marketing_referral_program/base_site.html" %}
+
+{% block title %} {{ customer.first_name }} vous offre 10€ {% endblock title %}
+
+{% block meta %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="fb:app_id" content="326429988160137" />
+    <meta property="og:url" content="https://hello.pleaseapp.com/parrainage/hello?r={{ customer.referral_code }}"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Bénéficiez d'une remise de 10€ 😍 avec le code {{ customer.referral_code }} sur votre première commande Please !"/>
+    <meta property="og:description" content="Faites comme {{ customer.first_name }}, rejoignez Please et faites vous livrer les meilleurs restaurants et commerces de votre ville !"/>
+    <meta property="og:image" content="https://pleasemarketing.s3.amazonaws.com/static/please_marketing_referral_program/img/others/parrainage_hello.png"/>
+{% endblock meta %}
+
+{% block content %} {% load static %}
+
+    <section id="intro">
+        <div class="intro-content bckg-hello-300">
+            <h1 style="max-width: 80%; margin: 0; padding-bottom: 40px; line-height: 1.5em">{{ customer.first_name }} vous offre 10€ avec le code {{ customer.referral_code }} !</h1>
+        </div>
+    </section>
+
+    <main id="main" class="padding-top-30">
+        <section id="advantages">
+            <div class="container">
+                <h1 class="padding-top-10 padding-bottom-10">Grâce à {{ customer.first_name }}, profitez de 10€ offerts pour vous faire livrer votre restaurant préféré 🤩!</h1>
+                    <div class="row">
+                        <div class="padding-bottom-50 padding-top-10 hello">
+                            <div id="fake-form">
+                                <input class="text-input" type="text" value="Son code de parrainage : {{ customer.referral_code }}" id="RefCode">
+                                <a class="primary-btn" href="https://pleaseapp.com/#/quartier/{{ customer.neighborhood.name }}" target="_blank">Je commande !</a>
+                            </div>
+                        </div>
+                    </div>
+
+                <h3>Avec <a href="https://pleaseapp.com/#/quartier/{{ customer.neighborhood.name }}" target="_blank">Please</a> faites vous livrer les meilleurs restaurants 🍔 et commerces de votre ville en 30 minutes 😍 !</h3>
+
+            </div>
+    </section>
+
+    </main>
+
+{% endblock content %}
