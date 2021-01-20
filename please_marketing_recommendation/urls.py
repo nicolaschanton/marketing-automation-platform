@@ -4,4 +4,5 @@ from please_marketing_recommendation import views
 
 urlpatterns = [
     path('recommendation', views.recommendation, name='recommendation'),
+    path('ae', views.ae, name='ae'),
 ]
